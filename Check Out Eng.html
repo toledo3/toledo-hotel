@@ -30,14 +30,14 @@ body {
 <font size="3" color="" face="times new romans">If you would like to check out, please confirm the following : </font>
 <br>
 <script>
-  function disableFormReport(event) {
+  function saveFormData(formData) {
     // Retrieve form data
     const form = event.target;
     const formData = new FormData(form);
     saveFormData(formData);
     event.preventDefault();
   }
- function saveFormData(formData) {
+ function disableFormReport(event)) {
    for (const [name, value] of formData) {
       console.log(name + ": " + value);
          }
