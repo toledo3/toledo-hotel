@@ -17,7 +17,7 @@ body {
       var field1 = $("#Room").val();
       var field2 = $("#Name").val();
       var field3 = $("#Check In Date").val();
-      var field4 = $("#Message").val();
+      var field4 = $("#Check In Time").val();
 
       $.ajax({
         url: "{https://docs.google.com/forms/u/0/d/e/1FAIpQLSfs_e-bdQrX9ehrUIlgZpg1eUldoDlLPt2j3C8eumjc_Elilw/formResponse}",
@@ -27,7 +27,7 @@ body {
           "entry.187780131": field1,
           "entry.1527535711": field2,
           "entry.39699293": field3,
-          "entry.354351359": field4
+          "entry.369483612": field4
         },
         type: "POST",
         dataType: "xml",
@@ -76,7 +76,7 @@ body {
 </tr>
 <tr>
 <td>Check Out Time</td>
-<td><input id="Checkout time" type="time" name="entry.1897180840"></td>
+<td><input id="Check Out Time" type="time" name="entry.369483612" value=""></td>
 </tr>
 <br>
 <br>
