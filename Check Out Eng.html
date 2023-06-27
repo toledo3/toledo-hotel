@@ -34,10 +34,10 @@ body {
     // Retrieve form data
     const form = event.target;
     const formData = new FormData(form);
-    saveFormData(formData);
-    event.preventDefault();
+ disableFormReport(event);
+   event.preventDefault();
   }
- function disableFormReport(event)) {
+ function disableFormReport(event) {
    for (const [name, value] of formData) {
       console.log(name + ": " + value);
          }
