@@ -16,7 +16,7 @@ body {
     function postToGoogle() {
       var field1 = $("#Room").val();
       var field2 = $("#Name").val();
-      var field3 = $("#Phone").val();
+      var field3 = $("#Check In Date").val();
       var field4 = $("#Message").val();
 
       $.ajax({
@@ -26,7 +26,7 @@ body {
         data: {
           "entry.187780131": field1,
           "entry.1527535711": field2,
-          "entry.1737955681": field3,
+          "entry.39699293": field3,
           "entry.354351359": field4
         },
         type: "POST",
@@ -72,7 +72,7 @@ body {
 </tr>
 <tr>
 <td>Check Out Date</td>
- <td><input id="Check In Date" type="date" name="entry.39699293" value="Check In Date"></td>
+ <td><input id="Check In Date" type="date" name="entry.39699293" value=""></td>
 </tr>
 <tr>
 <td>Check Out Time</td>
