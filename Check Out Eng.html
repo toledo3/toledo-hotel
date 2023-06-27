@@ -114,7 +114,7 @@ body {
 <br>
 <br>
 <br> 
-<input type="submit" value="Submit" onclick=" ">
+<input type="submit" value="Submit" onclick="saveFormData(formData) ">
 <input type="Reset" value="Clear">
 </form>
    <script>
@@ -125,9 +125,7 @@ body {
     event.preventDefault();
   }
   function saveFormData(formData) {
-   for (const [name, value] of formData) {
-     console.log(name + ": " + value);
-    }
+   document.getElementById("mG61Hd").submit();
   }
 </script>
 
