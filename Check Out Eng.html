@@ -31,7 +31,7 @@ body {
 <br>
 <script>
   function disableFormReport(event) {
-    const form = event.target;
+    const form = document.querySelector('form');
     const formData = new FormData(form);
    saveFormData(formData);
    event.preventDefault();
