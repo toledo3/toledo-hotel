@@ -114,9 +114,14 @@ body {
 <br>
 <br>
 <br> 
-<input type="submit" value="Submit" onclick=" ">
+<input type="submit" value="Submit" onclick="disableFormReport(event) ">
 <input type="Reset" value="Clear">
 </form>
+  <script>
+  function disableFormReport(event) {
+     event.preventDefault(); 
+    //document.getElementById("mG61Hd").submit();}
+     </script>
    </center>
 </body>
 </html>
