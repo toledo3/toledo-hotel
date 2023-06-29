@@ -12,21 +12,7 @@ body {
 </head>
   <body  style="border-style:double ; border-width:3">
 <br>
-    function generateTimestamp() {
-  var now = new Date();
-  
-  var year = now.getFullYear();
-  var month = padZero(now.getMonth() + 1); // Months are zero-based
-  var day = padZero(now.getDate());
-  var hour = padZero(now.getHours());
-  var minute = padZero(now.getMinutes());
-  var second = padZero(now.getSeconds());
-  var timestamp = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-  return timestamp;
-}
-function padZero(num) {
-return (num < 10 ? "0" : "") + num;
-}
+ 
 <center><a href="https://toledohotel.jo"><img src="logo.png" width="160px" height="55px"></a>
 <br>
 <br>
