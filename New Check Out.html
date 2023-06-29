@@ -12,16 +12,7 @@ body {
 </head>
    <body  style="border-style:double ; border-width:3">
 <br>
-     <script>
-  document.getElementById('checkout').addEventListener('submit', submitForm);
-  function submitForm(e) {
-    e.preventDefault(); // Prevent form submission
-    var Name = document.getElementsByName('Name')[0].value;
-    var Room = document.getElementsByName('Room')[0].value;
-    google.script.run.submitData(Name, Room); // Call Google Apps Script function
-  }
-</script>
-<center><a href="https://toledohotel.jo"><img src="logo.png" width="160px" height="55px"></a>
+    <center><a href="https://toledohotel.jo"><img src="logo.png" width="160px" height="55px"></a>
 <br>
 <br>
  <table border="0">
@@ -40,6 +31,15 @@ body {
 <br>
 <form id="checkout" onsubmit=" "  name="form" action="https://script.google.com/macros/s/AKfycbwltc0Gie7DtjuAzfdveLSmwQlOvQ_1pvotIG8i64Ui8YySO3H4hfiUj_JYW73VoBRruQ/exec" target="_self"  method="POST">
 <table border="0">
+   <script>
+  document.getElementById('checkout').addEventListener('submit', submitForm);
+  function submitForm(e) {
+    e.preventDefault(); // Prevent form submission
+    var Name = document.getElementsByName('Name')[0].value;
+    var Room = document.getElementsByName('Room')[0].value;
+    google.script.run.submitData(Name, Room); // Call Google Apps Script function
+  }
+</script>
   <tr>
 <td>Room :</td>
 <td><input id="Room" type="number" name="Room" value=""></td>
