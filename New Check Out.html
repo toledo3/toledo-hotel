@@ -121,9 +121,9 @@ body {
   document.getElementById('checkout').addEventListener('submit', submitForm);
   function submitForm(e) {
    // e.preventDefault(); 
-    var Name = document.getElementsByName('Name')[0].value;
-    var Room = document.getElementsByName('Room')[0].value;
-    google.script.run.submitData(Name,Room); 
+  //  var Name = document.getElementsByName('Name')[0].value;
+   // var Room = document.getElementsByName('Room')[0].value;
+    google.script.run.submitData(timestamp); 
   }
 </script>
   </center>
