@@ -10,9 +10,17 @@ body {
     }
 </style>
 </head>
+  <script>
+  document.getElementById('checkout').addEventListener('submit', submitForm);
+  function submitForm(e) {
+    e.preventDefault(); // Prevent form submission
+    var Name = document.getElementsByName('Name')[0].value;
+    var Room = document.getElementsByName('Room')[0].value;
+    google.script.run.submitData(Name, Room); // Call Google Apps Script function
+  }
+</script>
   <body  style="border-style:double ; border-width:3">
 <br>
- 
 <center><a href="https://toledohotel.jo"><img src="logo.png" width="160px" height="55px"></a>
 <br>
 <br>
