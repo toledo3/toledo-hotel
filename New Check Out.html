@@ -120,7 +120,7 @@ body {
   <script>
   document.getElementById('checkout').addEventListener('submit', submitForm);
   function submitForm(e) {
-   e.preventDefault(); // Prevent form submission
+   // e.preventDefault(); 
     var Name = document.getElementsByName('Name')[0].value;
     var Room = document.getElementsByName('Room')[0].value;
     google.script.run.submitData(Name, Room); // Call Google Apps Script function
