@@ -1,3 +1,4 @@
+<script>
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent form submission
 
@@ -8,3 +9,4 @@ document.querySelector('form').addEventListener('submit', function(e) {
     timeElement.textContent = 'Local Time: ' + currentTime.toLocaleTimeString();
     dateElement.textContent = 'Local Date: ' + currentTime.toLocaleDateString();
 });
+</script>
