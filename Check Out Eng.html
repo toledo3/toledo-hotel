@@ -25,7 +25,7 @@ body {
         // Call the Sheets API
         gapi.client.sheets.spreadsheets.values.append({
           spreadsheetId: 'AKfycbworzBrIP6ZgEzmnC6MMq5xkIDe51Qp3FUgQiVXfoLUS-cXSsPJvZKbrYru-JO1c69qSQ', // Enter your spreadsheet ID here
-          range: 'Time and Date!A1:B1', // Enter the range where you want to insert the values
+          range: 'Timestamp!A1:A1000', // Enter the range where you want to insert the values
           valueInputOption: 'USER_ENTERED',
           resource: {
             values: [[new Date().toLocaleString()]],
