@@ -14,21 +14,19 @@ body {
       var currentDate = new Date();
       var dateString = currentDate.toDateString();
       var timeString = currentDate.toLocaleTimeString();
-
       document.getElementById('currentDate').innerHTML = dateString;
       document.getElementById('currentTime').innerHTML = timeString;
     }
   </script>
 </head>
 <body  style="border-style:double ; border-width:3" onload="displayTimeAndDate()">
-   
 <br>
 <center><a href="https://toledohotel.jo"><img src="logo.png" width="160px" height="55px"></a>
 <br>
   <table border="0">
     <tr>
- <td> <span id="currentDate"></span></td>     
- <td> <span id="currentTime"></span></td>
+ <td><span id="currentDate"></span></td>     
+ <td><span id="currentTime"></span></td>
     </tr>
 <br>
 <tr>
