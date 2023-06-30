@@ -125,21 +125,13 @@ body {
   </center>
       <script>
       function handleFormSubmit(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Get the value of the datetime input field
-        const datetimeValue = document.getElementById('datetimeField').value;
-
-        // Create a new Date object from the input value
-        const datetime = new Date(datetimeValue);
-
-        // Prepare the data to be sent to Google Sheets
-        const rowData = [
+       event.preventDefault(); // Prevent form submission
+       const datetimeValue = document.getElementById('datetimeField').value;
+       const datetime = new Date(datetimeValue);
+       const rowData = [
           [datetime.toLocaleString()] // Convert the date to a localized string
         ];
-
-        // Call the Google Sheets API to append the data
-        gapi.client.sheets.spreadsheets.values.append({
+       gapi.client.sheets.spreadsheets.values.append({
           spreadsheetId: 'YOUR_SPREADSHEET_ID',
           range: 'Sheet1!A1', // Specify the range where you want to append the data
           valueInputOption: 'USER_ENTERED',
