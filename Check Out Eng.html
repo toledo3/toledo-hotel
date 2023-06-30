@@ -9,15 +9,36 @@ body {
     position:initial;
     }
 </style>
+ <script src="https://apis.google.com/js/api.js"></script>
   <script>
-    function displayTimeAndDate() {
-      var currentDate = new Date();
-      var dateString = currentDate.toDateString();
-      var timeString = currentDate.toLocaleTimeString();
-      document.getElementById('currentDate').innerHTML = dateString;
-      document.getElementById('currentTime').innerHTML = timeString;
+  function insertDateTime() {
+    // Load the Google Sheets API
+    gapi.load('client', start);
+    // Initializes the API client library and sets up sign-in state listeners
+    function start() {
+      gapi.client.init({
+        apiKey: 'YOUR_API_KEY', // Enter your API key here
+        discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+        clientId: 'YOUR_CLIENT_ID', // Enter your client ID here
+        scope: 'https://www.googleapis.com/auth/spreadsheets',
+      }).then(function() {
+        // Call the Sheets API
+        gapi.client.sheets.spreadsheets.values.append({
+          spreadsheetId: 'YOUR_SPREADSHEET_ID', // Enter your spreadsheet ID here
+          range: 'Time and Date!A1:B1', // Enter the range where you want to insert the values
+          valueInputOption: 'USER_ENTERED',
+          resource: {
+            values: [[new Date().toLocaleString()]],
+          },
+        }).then(function(response) {
+          console.log('Value inserted successfully:', response.result);
+        }, function(error) {
+          console.error('Error inserting value:', error.result.error.message);
+        });
+      });
     }
-  </script>
+  }
+</script>
 </head>
 <body  style="border-style:double ; border-width:3" onload="displayTimeAndDate()">
 <br>
