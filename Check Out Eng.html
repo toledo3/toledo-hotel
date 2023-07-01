@@ -122,19 +122,9 @@ document.write(today);
 <br>
 <br>
 <br> 
-<button type="submit">Send</button>
+<input type="submit"value="Send">
 <input type="Reset" value="Clear">
   </form>
-  <script>
-  document.getElementById('1mt4I-Rea0r9TLKw8buSeJ0M7Ff0urUo88RTXxt2kkE_qt6xuMpu4SLVK').addEventListener('submit', submitForm);
-  function submitForm(e) {
-    e.preventDefault();
-    var name = document.getElementsByName('Room')[0].value;
-    var email = document.getElementsByName('Name')[0].value;
-
-    google.script.run.submitData(Room, Name); // Call Google Apps Script function
-  }
-</script>
-    </center>
+  </center>
       </body>
 </html>
