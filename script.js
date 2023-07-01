@@ -4,9 +4,9 @@
   function submitForm(e) {
     e.preventDefault(); // Prevent form submission
 
-    var name = document.getElementsByName('name')[0].value;
-    var email = document.getElementsByName('email')[0].value;
+    var Room = document.getElementsByName('Room')[0].value;
+    var Name = document.getElementsByName('Name')[0].value;
 
-    google.script.run.submitData(name, email); // Call Google Apps Script function
+    google.script.run.submitData(Room, Name); // Call Google Apps Script function
   }
 </script>
