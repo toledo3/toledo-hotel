@@ -1,5 +1,5 @@
 <script>
-  document.getElementById('myForm').addEventListener('submit', submitForm);
+  document.getElementById('mG61Hd').addEventListener('submit', submitForm);
 
   function submitForm(e) {
     e.preventDefault(); // Prevent form submission
