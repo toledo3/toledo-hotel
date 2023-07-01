@@ -1,10 +1,12 @@
-document.querySelector('form').addEventListener('submit', function(e) {
+<script>
+  document.getElementById('myForm').addEventListener('submit', submitForm);
+
+  function submitForm(e) {
     e.preventDefault(); // Prevent form submission
 
-    var currentTime = new Date();
-    var timeElement = document.getElementById('localTime');
-    var dateElement = document.getElementById('localDate');
+    var name = document.getElementsByName('name')[0].value;
+    var email = document.getElementsByName('email')[0].value;
 
-    timeElement.textContent = 'Local Time: ' + currentTime.toLocaleTimeString();
-    dateElement.textContent = 'Local Date: ' + currentTime.toLocaleDateString();
-});
+    google.script.run.submitData(name, email); // Call Google Apps Script function
+  }
+</script>
