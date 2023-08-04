@@ -121,27 +121,6 @@ body {
 <input type="submit" value="Send">
 <input type="Reset" value="Clear">
   </form>
-  <script>
-    $(document).ready(function() {
-    var timestamp = new Date().toISOString();
-    $("#timestamp").val(timestamp);
-    $("#myForm").on("submit", function(event) {
-    event.preventDefault();
-    var formData = $(this).serialize();
-    $.ajax({
-        url: "https://script.google.com/macros/library/d/1mt4I-Rea0r9TLKw8buSeJ0M7Ff0urUo88RTXxt2kkE_qt6xuMpu4SLVK/19",
-        method: "POST",
-        data: formData,
-        success: function(response) {
-          console.log("Form submission successful!");
-        },
-        error: function(error) {
-          console.error("Error submitting form: " + error);
-        }
-      });
-    });
-  });
-</script>
-  </center>
+    </center>
       </body>
 </html>
