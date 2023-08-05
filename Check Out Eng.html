@@ -120,6 +120,13 @@ body {
 <input type="submit" value="Send">
 <input type="Reset" value="Clear">
   </form>
+  <script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  var timestampField = document.getElementById("timestamp");
+  var timestamp = new Date().toISOString();
+  timestampField.value = timestamp;
+});
+</script>
     </center>
       </body>
 </html>
